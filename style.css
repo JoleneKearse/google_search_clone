@@ -1,0 +1,142 @@
+/* ------------- Custom Properties ------------- */
+:root {
+    --clr-bg: #fff;
+    --gap-lg: 2rem;
+}
+
+/* ------------- Reset ------------- */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--clr-bg);
+    color: #3c4043;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+div,
+button,
+ul {
+    font: inherit;
+}
+
+img {
+    display: block;
+    min-width: 100%;
+    margin: 0;
+}
+
+/* ------------- Layout ------------- */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 70%;
+    margin-inline: auto;
+}
+
+* + * {
+    margin-bottom: var(--gap-lg);
+}
+
+.logo {
+    max-width: 10%;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    max-width: 100%;
+    padding: .75rem;
+    border-radius: 40rem;
+    color: #b9babd;
+    border: 1px solid #b9babd;
+}
+
+.search:hover,
+.search:focus {
+    box-shadow: 1px 2px 3px 5px #f8f9fa;
+}
+
+.search > * {
+    vertical-align: bottom;
+    margin: 0 auto;
+}
+
+i {
+    font-size: 1.75em;
+    font-weight: 200;
+    text-align: center;
+    flex: 1 1 15%;
+}
+
+input {
+    border: none;
+    color: #3c4043;
+}
+
+input[type="text"] {
+    flex: 2 1 70%;
+    font-size: 1.5em;
+    padding: 5px 5px;
+}
+
+input[type="text"]:focus,
+input[type="text"]:active {
+    outline: none;
+    color: #3c4043;
+}
+
+.buttons {
+    display: flex;
+    margin-inline: auto;
+}
+
+button {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: .25em;
+    color: #3c4043;
+    margin: 1rem 1rem;
+    padding: .8em 2em;
+    text-align: center;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    border: 1px solid #b9babd;
+}
+
+@media (max-width: 550px) {
+    main {
+        width: 95%;
+    }
+    .search {
+        padding: 10px 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .search > * {
+        margin: 0;
+    }
+    i {
+        flex: 1 1 5%;
+    }
+    input[type="text"] {
+        flex: 2 1 90%;
+    }
+    button {
+        padding: .5em .1em;
+    }
+}
